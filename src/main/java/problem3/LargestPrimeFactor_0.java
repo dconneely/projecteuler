@@ -9,24 +9,41 @@ package problem3;
  */
 public class LargestPrimeFactor_0 {
     public static void main(String[] args) {
-        System.out.println(sum(4_000_000));
+        System.out.println(lpf(600851475143L));
     }
 
-    // upperBound is inclusive.
-    static long sum(int upperBound) {
-        int m2 = 0;
-        int m1 = 1;
-        long sum = 0L;
-        while (true) {
-            int val = m2 + m1;
-            if (val > upperBound) {
-                return sum;
-            }
-            if (val % 2 == 0) {
-                sum += val;
-            }
-            m2 = m1;
-            m1 = val;
-        }
+    static long lpf(long n) {
+    	// special case value that we can't negate, but we know the answer.
+    	if (n == Long.MIN_VALUE) {
+    		return 2;
+    	}
+    	// make other values positive.
+    	if (n < 0) {
+    		n = -n;
+    	}
+    	// can't factorize 0 or 1 (or -1).
+    	if (n < 2) {
+    		return 0;
+    	}
+    	// repeatedly divide by low primes until left with highest prime.
+    	long d = 2;
+    	while (true) {
+	    	while (n % d == 0) {
+	    		n /= d;
+	    	}
+	    	if (n == 1) {
+	    		return d;
+	    	}
+	    	// try next divisor.
+	    	if (d == 2) {
+	    		d = 3;
+	    	} else {
+	    		d += 2;
+	    	}
+	    	// if d > sqrt(n), then n is prime.
+	    	if (d * d > n) {
+	    		return n;
+	    	}
+    	}
     }
 }
