@@ -1,4 +1,3 @@
-java-projecteuler-solutions
-===========================
+# task-projecteuler
 
-Some of the Project Euler problems solved in Java
+Some of the [Project Euler](https://projecteuler.net/) problems solved in Java
