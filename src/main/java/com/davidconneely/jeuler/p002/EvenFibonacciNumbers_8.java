@@ -1,4 +1,4 @@
-package problem2;
+package com.davidconneely.jeuler.p002;
 
 import java.util.NoSuchElementException;
 import java.util.PrimitiveIterator;

@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.davidconneely</groupId>
-    <artifactId>task-projecteuler</artifactId>
+    <artifactId>play-jeuler</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
-    <name>task-projecteuler</name>
+    <name>play-jeuler</name>
     <description>Some of the Project Euler problems solved in Java</description>
 
     <properties>
@@ -36,6 +36,6 @@
     </dependencies>
 
     <build>
-        <finalName>projecteuler</finalName>
+        <finalName>jeuler</finalName>
     </build>
 </project>

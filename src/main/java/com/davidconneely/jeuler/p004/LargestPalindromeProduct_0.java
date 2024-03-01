@@ -1,4 +1,4 @@
-package problem4;
+package com.davidconneely.jeuler.p004;
 
 public class LargestPalindromeProduct_0 {
 

@@ -1,4 +1,4 @@
-package problem1;
+package com.davidconneely.jeuler.p001;
 
 import org.junit.jupiter.api.Test;
 
